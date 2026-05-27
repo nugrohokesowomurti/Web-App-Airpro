@@ -1,0 +1,472 @@
+/* CSS RESET & VARIABLES */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --biru-langit-dark: #2A93D1;
+    --biru-langit: #52B2EC;
+    --biru-langit-light: #E3F2FD;
+    --putih-bersih: #FFFFFF;
+    --abu-background: #F8F9FA;
+    --hitam-brodo: #111111;
+    --abu-text: #555555;
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--putih-bersih);
+    color: var(--hitam-brodo);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+    background-color: var(--biru-langit-dark);
+    color: var(--putih-bersih);
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* NAVIGATION HEADER (Bro.do Minimalist Vibe) */
+.main-header {
+    background-color: var(--putih-bersih);
+    border-bottom: 1px solid #ECEFF1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--hitam-brodo);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--abu-text);
+    padding-bottom: 4px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--biru-langit-dark);
+    border-bottom: 2px solid var(--biru-langit-dark);
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-icons a {
+    color: var(--hitam-brodo);
+}
+
+.header-icons a:hover {
+    color: var(--biru-langit);
+}
+
+/* HERO SECTION (Bold Typography & Sleek Layout) */
+.hero-section {
+    position: relative;
+    height: 75vh;
+    min-height: 500px;
+    background: linear-gradient(135deg, #B3E5FC 0%, var(--biru-langit) 100%);
+    display: flex;
+    align-items: center;
+    color: var(--putih-bersih);
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+/* Subtle pattern accent simulating Bro.do lookbook photography spacing */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    color: var(--biru-langit-light);
+}
+
+.hero-title {
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 16px;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--hitam-brodo);
+    color: var(--putih-bersih);
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: var(--hitam-brodo);
+    color: var(--hitam-brodo);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--putih-bersih);
+    color: var(--putih-bersih);
+}
+
+.btn-secondary:hover {
+    background-color: var(--putih-bersih);
+    color: var(--hitam-brodo);
+}
+
+/* FEATURES SECTION */
+.features-section {
+    background-color: var(--abu-background);
+    padding: 40px 24px;
+    border-bottom: 1px solid #ECEFF1;
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    padding: 15px;
+}
+
+.feature-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 13px;
+    color: var(--abu-text);
+}
+
+/* PRODUCTS SECTION */
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    font-size: 14px;
+    color: var(--abu-text);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* PRODUCT CARD (Clean & Modern Layout) */
+.product-card {
+    background-color: var(--putih-bersih);
+    position: relative;
+    cursor: pointer;
+}
+
+.product-image {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+/* Stylized placeholder gradients to simulate minimalist photography */
+.placeholder-blue-1 { background: linear-gradient(to bottom, #E3F2FD, #BBDEFB); }
+.placeholder-blue-2 { background: linear-gradient(to bottom, #E1F5FE, #B3E5FC); }
+.placeholder-blue-3 { background: linear-gradient(to bottom, #E0F7FA, #B2EBF2); }
+.placeholder-blue-4 { background: linear-gradient(to bottom, #F5F5F5, #E0E0E0); }
+
+.product-image::before {
+    content: 'AIRPRO PRODUCT';
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.15);
+    letter-spacing: 2px;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--putih-bersih);
+}
+
+.badge.sale { background-color: #D32F2F; }
+.badge.new { background-color: var(--biru-langit-dark); }
+.badge.soldout { background-color: #757575; }
+
+.view-product {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.9);
+    color: var(--putih-bersih);
+    text-align: center;
+    padding: 12px 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .view-product {
+    bottom: 0;
+}
+
+.product-info {
+    padding: 15px 0;
+}
+
+.product-category {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--biru-langit-dark);
+    margin-bottom: 4px;
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--hitam-brodo);
+    margin-bottom: 6px;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: #999999;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.price-current {
+    color: var(--hitam-brodo);
+}
+
+/* LOOKBOOK / PROMO BANNER */
+.lookbook-section {
+    padding: 0 24px 80px 24px;
+}
+
+.lookbook-banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), linear-gradient(45deg, var(--biru-langit-dark), #90CAF9);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    color: var(--putih-bersih);
+}
+
+.lookbook-content {
+    max-width: 500px;
+}
+
+.lookbook-content h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.lookbook-content p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* FOOTER SECTION */
+.main-footer {
+    background-color: var(--hitam-brodo);
+    color: #999999;
+    padding: 70px 24px 30px 24px;
+    font-size: 13px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.footer-brand h2 {
+    color: var(--putih-bersih);
+    letter-spacing: 3px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    max-width: 400px;
+    line-height: 1.7;
+}
+
+.footer-links h4 {
+    color: var(--putih-bersih);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--biru-langit);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #222222;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simplifikasi mobile */
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .lookbook-banner {
+        padding: 0 24px;
+        height: auto;
+        padding: 60px 24px;
+    }
+}
