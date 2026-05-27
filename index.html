@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirPro | Air Freshner</title>
+    <title>AirPro | Air Freshener</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        <p>#TERUS TERINGAT WANGINYA</p>
+    <div id="userStatusBar" class="user-status-bar" style="display: none; background: #f0f0f0; padding: 5px 20px; text-align: right; font-size: 14px;">
+        Halo, <strong id="statusUsername">Guest</strong>! 
+        <a href="#" id="btnLogout" style="color: red; margin-left: 10px; text-decoration: none;">[Keluar]</a>
     </div>
 
-    <!-- Navigation Header -->
     <header class="main-header">
         <div class="header-container">
             <div class="logo">
@@ -27,23 +27,22 @@
                 <a href="#">Kontak</a>
             </nav>
             <div class="header-icons">
-                <a href="#" title="Cari">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </nav>
-                <a href="#" title="Keranjang">
+                <a href="#" id="btnAccount" title="Akun">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </a>
+                <a href="#" id="btnCart" title="Keranjang" style="position: relative;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span id="cartCount" style="position: absolute; top: -8px; right: -10px; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 11px;">0</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (Bro.do Minimalist Style) -->
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-subtitle">NEW ARRIVAL</p>
-            <h1 class="hero-title">FRESH AIR, EVERYWHERE</h1>
-            <p class="hero-description">Inovasi sirkulasi udara modern dengan desain minimalis untuk gaya hidup aktif dan produktif.</p>
+            <h1 class="hero-title">#TERUS TERINGAT WANGINYA</h1>
+            <p class="hero-description">“Airpro brings premium fragrances as your true expression.”</p>
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary">BELANJA SEKARANG</a>
                 <a href="#" class="btn btn-secondary">LIHAT LIHAT DULU</a>
@@ -51,28 +50,37 @@
         </div>
     </section>
 
-    <!-- Brand Values / Features -->
     <section class="features-section">
         <div class="features-grid">
             <div class="feature-item">
-                <div class="feature-icon">⚡</div>
-                <h3>Teknologi AeroFlow</h3>
-                <p>Sirkulasi udara maksimal dengan konsumsi daya super hemat.</p>
+                <div class="feature-icon">🍃</div>
+                <h3>Wangi Premium</h3>
+                <p> wangi berkualitas
+                    premium, berbeda dengan pengharum
+                    yang lain. Setiap varian
+                    dirancang dengan standar berkualitas
+                    tinggi.
+                </p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon">🌿</div>
-                <h3>Ramah Lingkungan</h3>
-                <p>Material premium yang dapat didaur ulang dan tahan lama.</p>
+                <div class="feature-icon">💎</div>
+                <h3>Produk berkualitas</h3>
+                <p> Konsumen mendapatkan manfaat
+                    produk yang sepadan bahkan lebih
+                    dari harga yang dibayarkan.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon">🛡️</div>
-                <h3>Garansi 2 Tahun</h3>
-                <p>Layanan purna jual prima langsung dari pusat servis AirPro.</p>
+                <div class="feature-icon">💡</div>
+                <h3>Selalu Berinovasi</h3>
+                <p> Airpro terus berkembang
+                    mengikuti tren dan kebutuhan
+                    pasar. Inovasi dilakukan secara
+                    berkelanjutan, baik dari segi varian
+                    aroma, dan desain produk.</p>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products (Grid 4 Kolom ala E-Commerce Bro.do) -->
     <section class="products-section">
         <div class="section-header">
             <h2>PRODUK UNGGULAN</h2>
@@ -80,69 +88,68 @@
         </div>
         
         <div class="products-grid">
-            <!-- Produk 1 -->
-            <div class="product-card">
+            <div class="product-card" data-id="p1" data-name="AirPro Breeze X1" data-price="649000">
                 <div class="product-image placeholder-blue-1">
                     <span class="badge sale">SALE</span>
                     <div class="view-product">LIHAT PRODUK</div>
                 </div>
                 <div class="product-info">
                     <p class="product-category">SERIES A</p>
-                    <h3 class="product-name">AirPro Breeze X1</h3>
+                    <h3 class="product-name">Airpro Product1</h3>
                     <p class="product-price">
                         <span class="price-old">Rp 899.000</span>
                         <span class="price-current">Rp 649.000</span>
                     </p>
+                    <button class="btn-add-to-cart" style="margin-top: 10px; width: 100%; padding: 8px; cursor: pointer;">TAMBAH KE KERANJANG</button>
                 </div>
             </div>
 
-            <!-- Produk 2 -->
-            <div class="product-card">
+            <div class="product-card" data-id="p2" data-name="AirPro Atmos Pro" data-price="1299000">
                 <div class="product-image placeholder-blue-2">
                     <span class="badge new">NEW</span>
                     <div class="view-product">LIHAT PRODUK</div>
                 </div>
                 <div class="product-info">
                     <p class="product-category">SERIES PRIME</p>
-                    <h3 class="product-name">AirPro Atmos Pro</h3>
+                    <h3 class="product-name">Airpro Product2</h3>
                     <p class="product-price">
                         <span class="price-current">Rp 1.299.000</span>
                     </p>
+                    <button class="btn-add-to-cart" style="margin-top: 10px; width: 100%; padding: 8px; cursor: pointer;">TAMBAH KE KERANJANG</button>
                 </div>
             </div>
 
-            <!-- Produk 3 -->
-            <div class="product-card">
+            <div class="product-card" data-id="p3" data-name="AirPro Go Mini" data-price="349000">
                 <div class="product-image placeholder-blue-3">
                     <div class="view-product">LIHAT PRODUK</div>
                 </div>
                 <div class="product-info">
                     <p class="product-category">PORTABLE</p>
-                    <h3 class="product-name">AirPro Go Mini</h3>
+                    <h3 class="product-name">Airpro Product3</h3>
                     <p class="product-price">
                         <span class="price-current">Rp 349.000</span>
                     </p>
+                    <button class="btn-add-to-cart" style="margin-top: 10px; width: 100%; padding: 8px; cursor: pointer;">TAMBAH KE KERANJANG</button>
                 </div>
             </div>
 
-            <!-- Produk 4 -->
-            <div class="product-card">
+            <div class="product-card" data-id="p4" data-name="AirPro Aero Wave" data-price="799000">
                 <div class="product-image placeholder-blue-4">
                     <span class="badge soldout">STOK MENIPIS</span>
                     <div class="view-product">LIHAT PRODUK</div>
                 </div>
                 <div class="product-info">
                     <p class="product-category">SERIES E</p>
-                    <h3 class="product-name">AirPro Aero Wave</h3>
+                    <h3 class="product-name">Airpro Product3</h3>
                     <p class="product-price">
                         <span class="price-current">Rp 799.000</span>
                     </p>
+                    <button class="btn-add-to-cart" style="margin-top: 10px; width: 100%; padding: 8px; cursor: pointer;">TAMBAH KE KERANJANG</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lookbook / Banner Edukasi Minimalis -->
     <section class="lookbook-section">
         <div class="lookbook-banner">
             <div class="lookbook-content">
@@ -153,7 +160,61 @@
         </div>
     </section>
 
-    <!-- Footer -->
+<div id="authModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center;">
+        <div class="bro-modal-content" style="width: 90%; max-width: 440px; position: relative;">
+            <button id="btnCloseModal" class="bro-modal-close" style="position: absolute; border: none; background: none; cursor: pointer;">&times;</button>
+            
+            <div id="cartFormWindow" style="display: none;">
+                <h3 class="bro-title">KERANJANG BELANJA</h3>
+                <div id="cartItemsList" style="max-height: 240px; overflow-y: auto; margin-bottom: 20px; padding-right: 5px;">
+                    </div>
+                <div style="border-top: 1px solid var(--hitam-brodo); padding-top: 15px; font-size: 13px; font-weight: 700; display: flex; justify-content: space-between; margin-bottom: 25px; letter-spacing: 1px;">
+                    <span>TOTAL ESTIMASI:</span>
+                    <span id="cartTotalPrice">Rp 0</span>
+                </div>
+                <button id="btnCheckoutSubmit" class="bro-btn-primary">LANJUTKAN KE PEMBAYARAN</button>
+            </div>
+
+            <div id="loginFormWindow" style="display: none;">
+                <div id="authNoticeText" class="bro-notice" style="display: none;">🔒 SILAKAN MASUK UNTUK MELANJUTKAN CHECKOUT</div>
+                <h3 class="bro-title">LOG IN</h3>
+                <form id="formLogin">
+                    <div>
+                        <label class="bro-label">ALAMAT EMAIL</label>
+                        <input type="email" id="loginEmail" class="bro-input" required placeholder="nama@email.com">
+                    </div>
+                    <div>
+                        <label class="bro-label">KATA SANDI</label>
+                        <input type="password" id="loginPassword" class="bro-input" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="bro-btn-primary" style="margin-top: 5px;">MASUK KE AKUN</button>
+                </form>
+                <p class="bro-switch-text">Belum terdaftar? <a href="#" id="linkToRegister">Buat Akun Baru</a></p>
+            </div>
+
+            <div id="registerFormWindow" style="display: none;">
+                <div id="authNoticeTextReg" class="bro-notice" style="display: none;">🔒 SILAKAN BUAT AKUN UNTUK MELANJUTKAN CHECKOUT</div>
+                <h3 class="bro-title">DAFTAR AKUN</h3>
+                <form id="formRegister">
+                    <div>
+                        <label class="bro-label">NAMA LENGKAP</label>
+                        <input type="text" id="regName" class="bro-input" required placeholder="Masukkan nama lengkap Anda">
+                    </div>
+                    <div>
+                        <label class="bro-label">ALAMAT EMAIL</label>
+                        <input type="email" id="regEmail" class="bro-input" required placeholder="nama@email.com">
+                    </div>
+                    <div>
+                        <label class="bro-label">KATA SANDI</label>
+                        <input type="password" id="regPassword" class="bro-input" required placeholder="Minimal 6 karakter">
+                    </div>
+                    <button type="submit" class="bro-btn-primary" style="margin-top: 5px;">BUAT AKUN</button>
+                </form>
+                <p class="bro-switch-text">Sudah memiliki akun? <a href="#" id="linkToLogin">Login di sini</a></p>
+            </div>
+        </div>
+    </div>
+        
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-brand">

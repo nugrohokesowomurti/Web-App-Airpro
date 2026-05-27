@@ -470,3 +470,158 @@ a {
         padding: 60px 24px;
     }
 }
+
+/* ==========================================================
+   MODERN MINIMALIST MODAL STYLE (BRO.DO INSPIRED OVERRIDE)
+   ========================================================== */
+
+/* Animasi & Backdrop Blur Efek Kaca */
+#authModal {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Container Utama Modal - Sharp Corners & Solid Shadow */
+.bro-modal-content {
+    background: var(--putih-bersih) !important;
+    padding: 40px !important;
+    border-radius: 0px !important; /* Mengikuti gaya tegas Bro.do */
+    border: 1px solid #E5E5E5 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Tombol Close Silang */
+.bro-modal-close {
+    font-weight: 300 !important;
+    font-size: 32px !important;
+    color: var(--hitam-brodo) !important;
+    top: 15px !important;
+    right: 20px !important;
+    transition: transform 0.2s ease !important;
+}
+.bro-modal-close:hover {
+    transform: rotate(90deg);
+}
+
+/* Tipografi Judul Form */
+.bro-title {
+    font-size: 20px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: var(--hitam-brodo) !important;
+    margin-bottom: 25px !important;
+    margin-top: 0 !important;
+    border-bottom: 2px solid var(--hitam-brodo) !important;
+    padding-bottom: 12px !important;
+}
+
+/* Rambu Notice Alert di Dalam Modal */
+.bro-notice {
+    background: var(--abu-background) !important;
+    border-left: 3px solid var(--hitam-brodo) !important;
+    padding: 12px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    color: var(--abu-text) !important;
+    text-transform: uppercase !important;
+    margin-bottom: 20px !important;
+}
+
+/* Label Input Form */
+.bro-label {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: var(--hitam-brodo) !important;
+}
+
+/* Kolom Isian Input */
+.bro-input {
+    width: 100% !important;
+    padding: 12px 15px !important;
+    margin-top: 6px !important;
+    margin-bottom: 18px !important;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 0px !important; /* Kotak Sempurna */
+    font-family: var(--font-primary) !important;
+    font-size: 14px !important;
+    transition: border-color 0.2s ease !important;
+    box-sizing: border-box !important;
+}
+.bro-input:focus {
+    outline: none !important;
+    border-color: var(--hitam-brodo) !important;
+}
+
+/* Tombol Utama Hitam-Putih Invert Efek */
+.bro-btn-primary {
+    width: 100% !important;
+    padding: 15px !important;
+    background-color: var(--hitam-brodo) !important;
+    color: var(--putih-bersih) !important;
+    border: 1px solid var(--hitam-brodo) !important;
+    border-radius: 0px !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+.bro-btn-primary:hover {
+    background-color: var(--putih-bersih) !important;
+    color: var(--hitam-brodo) !important;
+}
+
+/* Teks Navigasi Pindah Jendela Login/Register */
+.bro-switch-text {
+    font-size: 13px !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    color: var(--abu-text) !important;
+}
+.bro-switch-text a {
+    color: var(--hitam-brodo) !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+/* Baris List Barang di Dalam Keranjang */
+.cart-item-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #EEEEEE !important;
+    font-size: 14px !important;
+}
+.cart-item-name {
+    font-weight: 700 !important;
+    color: var(--hitam-brodo) !important;
+}
+.cart-item-qty {
+    color: var(--abu-text) !important;
+    font-size: 12px !important;
+    margin-left: 5px !important;
+}
+.cart-item-price {
+    font-weight: 700 !important;
+    color: var(--hitam-brodo) !important;
+}
+
+/* User Status Bar Premium Touch */
+.user-status-bar {
+    background-color: var(--hitam-brodo) !important;
+    color: var(--putih-bersih) !important;
+    padding: 8px 24px !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+.user-status-bar strong {
+    color: var(--biru-langit) !important;
+}
